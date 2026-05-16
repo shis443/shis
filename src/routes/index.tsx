@@ -3,7 +3,7 @@ import profile from "@/assets/profile-v3.jpg";
 import apexwild from "@/assets/apexwild.jpg";
 import trinacria from "@/assets/trinacria-v3.png";
 import giro360 from "@/assets/giro360-new.png";
-import hobby1 from "@/assets/hobby1.jpg";
+import hobby1 from "@/assets/hobby1-new.png";
 import hobby2 from "@/assets/hobby2.jpg";
 import hobby3 from "@/assets/hobby3.jpg";
 
