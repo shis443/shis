@@ -5,7 +5,7 @@ import trinacria from "@/assets/trinacria-v3.png";
 import giro360 from "@/assets/giro360-new.png";
 import hobby1 from "@/assets/hobby1-new.png";
 import hobby2 from "@/assets/hobby2-new.png";
-import hobby3 from "@/assets/hobby3.jpg";
+import hobby3 from "@/assets/hobby3-new.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -133,7 +133,7 @@ function BentoCard({ card }: { card: Card }) {
             src={card.img}
             alt={card.imgAlt ?? ""}
             loading="lazy"
-            className={`h-full w-full transition-all duration-700 ease-out ${card.imgClassName ?? "group-hover:scale-[1.04]"} object-cover`}
+            className={`h-full w-full transition-all duration-700 ease-out ${card.imgClassName ?? "group-hover:scale-[1.04]"} object-contain`}
           />
         </div>
       )}
