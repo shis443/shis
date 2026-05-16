@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import profile from "@/assets/profile.jpg";
 import apexwild from "@/assets/apexwild.jpg";
-import trinacria from "@/assets/trinacria.jpg";
+import trinacria from "@/assets/new-trinacria.jpg";
 import giro360 from "@/assets/giro360.jpg";
 import hobby1 from "@/assets/hobby1.jpg";
 import hobby2 from "@/assets/hobby2.jpg";
@@ -38,7 +38,7 @@ type Card = {
 
 const cards: Card[] = [
   {
-    label: "🌿 Shis",
+    label: "🇪🇹 Shis",
     title: (
       <>
         Shis is a student & founder building <em className="italic">immersive stays</em>,
@@ -133,7 +133,7 @@ function BentoCard({ card }: { card: Card }) {
             src={card.img}
             alt={card.imgAlt ?? ""}
             loading="lazy"
-            className={`h-full w-full object-cover transition-all duration-700 ease-out ${card.imgClassName ?? "group-hover:scale-[1.04]"}`}
+            className={`h-full w-full transition-all duration-700 ease-out ${card.imgClassName ?? "group-hover:scale-[1.04]"} object-contain`}
           />
         </div>
       )}
