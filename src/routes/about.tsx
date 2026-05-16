@@ -151,7 +151,7 @@ function Card({ card }: { card: SideCard }) {
   return (
     <Wrap
       {...(props as Record<string, never>)}
-      className={`group relative overflow-hidden rounded-3xl border border-border/50 ${card.bg} ${card.hoverBg} ${card.hoverText ?? ""}
+      className={`group relative overflow-hidden rounded-3xl border border-border/50 h-full w-full block ${card.bg} ${card.hoverBg} ${card.hoverText ?? ""}
         transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.18)] ${card.className ?? ""}`}
     >
       <div className="absolute top-4 right-4 z-10">{card.label}</div>
