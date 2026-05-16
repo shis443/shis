@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import profile from "@/assets/profile-v3.jpg";
-import apexwild from "@/assets/apexwild.jpg";
+import apexwild from "@/assets/apexwild-v2.png";
 import trinacria from "@/assets/trinacria-v3.png";
 import giro360 from "@/assets/giro360-new.png";
 import hobby1 from "@/assets/hobby1-new.png";
@@ -133,7 +133,7 @@ function BentoCard({ card }: { card: Card }) {
             src={card.img}
             alt={card.imgAlt ?? ""}
             loading="lazy"
-            className={`h-full w-full transition-all duration-700 ease-out ${card.imgClassName ?? "group-hover:scale-[1.04]"} object-contain`}
+            className={`h-full w-full transition-all duration-700 ease-out ${card.imgClassName ?? "group-hover:scale-[1.04]"} object-cover`}
           />
         </div>
       )}
