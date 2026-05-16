@@ -1,6 +1,6 @@
 import { Link, Outlet } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import messina from "@/assets/messina.jpg";
+import messina from "@/assets/messina-new.jpg";
 
 function NavBar() {
   const links = [
