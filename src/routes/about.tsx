@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/new-profile.jpg";
 import hobby1 from "@/assets/hobby1.jpg";
 import bookRichDad from "@/assets/book-rich-dad.jpg";
 import bookThinkGrow from "@/assets/book-think-grow.jpg";
@@ -134,7 +134,7 @@ const sideCards: SideCard[] = [
         <img
           src={hobby1}
           alt=""
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="h-full w-full transition-transform duration-700 group-hover:scale-105 object-contain"
         />
       </div>
     ),

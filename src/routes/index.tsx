@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import profile from "@/assets/profile.jpg";
+import profile from "@/assets/new-profile.jpg";
 import apexwild from "@/assets/apexwild.jpg";
 import trinacria from "@/assets/new-trinacria.jpg";
 import giro360 from "@/assets/giro360.jpg";
