@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import profile from "@/assets/profile-v3.jpg";
+import profile from "@/assets/profile-v4.jpg";
 import hobby1 from "@/assets/hobby1-new.png";
 import bookRichDad from "@/assets/book-rich-dad.jpg";
 import bookThinkGrow from "@/assets/book-think-grow.jpg";
