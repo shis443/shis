@@ -163,7 +163,8 @@ function Home() {
       {/* Tiny profile signal */}
       <div className="flex items-center gap-3 mb-6 px-2">
         <img src={profile} alt="Shis Ousman" className="h-9 w-9 rounded-full object-cover" />
-        <div className="text-sm">
+        <div className="text-sm flex items-center gap-1.5">
+          <span aria-label="Ethiopian flag" title="Ethiopia">🇪🇹</span>
           <span className="font-medium">Shis Ousman</span>
           <span className="text-muted-foreground"> · Messina, Sicily</span>
         </div>

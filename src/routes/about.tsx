@@ -1,8 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
 import profile from "@/assets/profile.jpg";
 import hobby1 from "@/assets/hobby1.jpg";
-import hobby2 from "@/assets/hobby2.jpg";
-import hobby3 from "@/assets/hobby3.jpg";
+import bookRichDad from "@/assets/book-rich-dad.jpg";
+import bookThinkGrow from "@/assets/book-think-grow.jpg";
+import bookInfluence from "@/assets/book-influence.jpg";
+import { FaSpotify, FaYoutube } from "react-icons/fa6";
+import { SiLetterboxd, SiGoodreads } from "react-icons/si";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -19,7 +22,7 @@ export const Route = createFileRoute("/about")({
 });
 
 type SideCard = {
-  label: string;
+  label: React.ReactNode;
   bg: string;
   hoverBg: string;
   hoverText?: string;
@@ -39,71 +42,91 @@ const portraitCard: SideCard = {
 };
 
 const sideCards: SideCard[] = [
+  // Spotify
   {
-    label: "🎧 Spotify",
+    label: (
+      <span className="inline-flex items-center justify-center h-7 w-7 rounded-md bg-black text-[#1DB954]">
+        <FaSpotify className="h-4 w-4" />
+      </span>
+    ),
     bg: "bg-card",
     hoverBg: "group-hover:bg-[#d6e7d8]",
     body: (
       <div className="absolute inset-0 flex flex-col items-center justify-center p-4">
-        <div className="h-24 w-24 rounded-xl bg-gradient-to-br from-orange-300 via-pink-400 to-purple-500 shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3" />
-        <div className="mt-3 font-display text-lg">
-          Spotify <span className="italic text-accent">playlist</span>
+        <div className="h-24 w-24 rounded-xl bg-gradient-to-br from-orange-300 via-pink-500 to-purple-600 shadow-lg transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3" />
+        <div className="mt-3 font-display text-lg text-center leading-tight">
+          shisousman
+          <div className="text-xs italic text-muted-foreground">the future ceo</div>
         </div>
       </div>
     ),
-    href: "https://spotify.com/",
+    href: "https://open.spotify.com/user/shisousman",
   },
+  // Letterboxd (wide)
   {
-    label: "🎬 Letterboxd",
+    label: (
+      <span className="inline-flex items-center justify-center h-7 w-7 rounded-md bg-[#14181c]">
+        <SiLetterboxd className="h-4 w-4 text-white" />
+      </span>
+    ),
     bg: "bg-card",
     hoverBg: "group-hover:bg-[#fff1e5]",
     body: (
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="text-3xl md:text-4xl font-display font-semibold tracking-tight">
+        <div className="text-3xl md:text-5xl font-display font-bold tracking-tight">
           Letterboxd
         </div>
       </div>
     ),
-    className: "md:col-span-2",
+    className: "col-span-2",
     href: "https://letterboxd.com/",
   },
+  // Goodreads with 3 book covers
   {
-    label: "📖 Goodreads",
+    label: (
+      <span className="inline-flex items-center justify-center h-7 w-7 rounded-md bg-[#e9e2d0]">
+        <SiGoodreads className="h-4 w-4 text-[#382110]" />
+      </span>
+    ),
     bg: "bg-card",
     hoverBg: "group-hover:bg-[#f1e6d2]",
     body: (
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="text-2xl font-display italic">goodreads</div>
-        <img
-          src={hobby2}
-          alt=""
-          className="mt-2 h-16 w-24 object-cover rounded-md shadow-md translate-y-4 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
-        />
+      <div className="absolute inset-0 flex flex-col items-center justify-end pb-3">
+        <div className="text-2xl md:text-3xl font-display italic mb-2">goodreads</div>
+        <div className="flex items-end justify-center gap-1 translate-y-3 opacity-90 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+          <img src={bookRichDad} alt="Rich Dad Poor Dad" className="h-20 w-14 object-cover rounded shadow-md -rotate-6" />
+          <img src={bookThinkGrow} alt="Think and Grow Rich" className="h-24 w-16 object-cover rounded shadow-md z-10" />
+          <img src={bookInfluence} alt="Influence: The Psychology of Persuasion" className="h-20 w-14 object-cover rounded shadow-md rotate-6" />
+        </div>
       </div>
     ),
     href: "https://goodreads.com/",
   },
+  // Backloggd
   {
-    label: "🎮 Backloggd",
+    label: (
+      <span className="inline-flex items-center justify-center h-7 w-7 rounded-md bg-[#2a2a28] text-[#f3ede2] font-bold text-sm">
+        B
+      </span>
+    ),
     bg: "bg-card",
-    hoverBg: "group-hover:bg-[#2a2a28]",
-    hoverText: "group-hover:text-[#f3ede2]",
+    hoverBg: "group-hover:bg-[#bcdcff]",
     body: (
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center">
         <div className="text-2xl font-display font-bold underline underline-offset-4">
           Backloggd
         </div>
-        <img
-          src={hobby3}
-          alt=""
-          className="mt-2 h-16 w-24 object-cover rounded-md shadow-md translate-y-4 opacity-80 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100"
-        />
       </div>
     ),
     href: "#",
   },
+  // YouTube (wide)
   {
-    label: "📺 YouTube",
+    label: (
+      <span className="inline-flex items-center justify-center h-7 w-7 rounded-md bg-[#FF0000] text-white">
+        <FaYoutube className="h-4 w-4" />
+      </span>
+    ),
     bg: "bg-card",
     hoverBg: "group-hover:bg-[#ffe2e2]",
     body: (
@@ -115,7 +138,7 @@ const sideCards: SideCard[] = [
         />
       </div>
     ),
-    className: "md:col-span-2",
+    className: "col-span-2",
     href: "https://youtube.com/@shis_adem",
   },
 ];
@@ -128,10 +151,10 @@ function Card({ card }: { card: SideCard }) {
   return (
     <Wrap
       {...(props as Record<string, never>)}
-      className={`group relative overflow-hidden rounded-3xl border border-border/50 ${card.bg} ${card.hoverBg} ${card.hoverText ?? ""}
-        aspect-square transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.18)] ${card.className ?? ""}`}
+      className={`group relative overflow-hidden rounded-3xl border border-border/50 h-full w-full block ${card.bg} ${card.hoverBg} ${card.hoverText ?? ""}
+        transition-all duration-500 hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.18)] ${card.className ?? ""}`}
     >
-      <div className="absolute top-4 left-5 text-xs font-medium z-10">{card.label}</div>
+      <div className="absolute top-4 right-4 z-10">{card.label}</div>
       {card.body}
     </Wrap>
   );
@@ -146,7 +169,9 @@ function About() {
           <h1 className="font-display text-4xl md:text-5xl">My journey.</h1>
           <div className="mt-6 h-px bg-border" />
           <div className="mt-8 space-y-5 text-base md:text-[17px] leading-relaxed text-foreground/90">
-            <p>I'm Shis, a student and entrepreneur currently based in Messina, Sicily 🇮🇹.</p>
+            <p className="flex items-center gap-2">
+              I'm <span aria-label="Ethiopian flag">🇪🇹</span> Shis, a student and entrepreneur currently based in Messina, Sicily 🇮🇹.
+            </p>
             <p>
               I've always been drawn to creative ideas — from architecture and cinematic
               visuals to digital experiences that make people feel something. What started as
@@ -171,13 +196,32 @@ function About() {
           </div>
         </article>
 
-        {/* RIGHT — Bento side */}
-        <div className="grid grid-cols-2 auto-rows-fr gap-4">
-          <Card card={portraitCard} />
-          <Card card={sideCards[0]} />
-          <Card card={sideCards[1]} />
-          <Card card={sideCards[2]} />
-          <Card card={sideCards[3]} />
+        {/* RIGHT — Bento side: 3 columns × 4 rows */}
+        <div className="grid grid-cols-3 auto-rows-[10rem] md:auto-rows-[11rem] gap-4">
+          {/* Portrait spans 2 cols × 2 rows */}
+          <div className="col-span-2 row-span-2">
+            <Card card={portraitCard} />
+          </div>
+          {/* Spotify 1×2 tall */}
+          <div className="row-span-2">
+            <Card card={sideCards[0]} />
+          </div>
+          {/* Letterboxd wide 3×1 */}
+          <div className="col-span-3">
+            <Card card={sideCards[1]} />
+          </div>
+          {/* Goodreads 1×2 */}
+          <div className="row-span-2">
+            <Card card={sideCards[2]} />
+          </div>
+          {/* Backloggd 2×1 */}
+          <div className="col-span-2">
+            <Card card={sideCards[3]} />
+          </div>
+          {/* YouTube 2×1 wide */}
+          <div className="col-span-2">
+            <Card card={sideCards[4]} />
+          </div>
         </div>
       </div>
     </div>

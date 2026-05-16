@@ -67,11 +67,10 @@ function Footer() {
         </p>
         <div className="flex flex-wrap items-start gap-x-6 gap-y-2 text-sm md:justify-end">
           {[
-            ["Instagram", "https://instagram.com/shisadem"],
-            ["LinkedIn", "https://linkedin.com/in/shisousman"],
+            ["Instagram", "https://www.instagram.com/shis_adem?igsh=eXRvYXNvdjhtanh5&utm_source=qr"],
+            ["LinkedIn", "https://www.linkedin.com/in/shis-ousman-792496342"],
             ["YouTube", "https://youtube.com/@shis_adem"],
-            ["X", "https://x.com/yourusername"],
-            ["CV", "https://yourdomain.com/cv.pdf"],
+            ["Email", "mailto:shisousman@gmail.com"],
           ].map(([label, href]) => (
             <a
               key={label}
