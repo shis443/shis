@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import profile from "@/assets/portrait.jpg";
-import hobby1 from "@/assets/hobby1-v2.jpg";
+import hobby1 from "@/assets/youtube-hobby.jpg";
 import bookRichDad from "@/assets/book-rich-dad.jpg";
 import bookThinkGrow from "@/assets/book-think-grow.jpg";
 import bookInfluence from "@/assets/book-influence.jpg";
@@ -60,7 +60,7 @@ const sideCards: SideCard[] = [
         </div>
       </div>
     ),
-    href: "https://open.spotify.com/user/shisousman",
+    href: "https://open.spotify.com/episode/27WIiMw5jITtQfqFycexet",
   },
   // Letterboxd (wide)
   {
@@ -197,28 +197,32 @@ function About() {
         </article>
 
         {/* RIGHT — Bento side: 3 columns × 4 rows */}
-        <div className="grid grid-cols-3 auto-rows-[10rem] md:auto-rows-[11rem] gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[9rem] md:auto-rows-[11rem] gap-3 md:gap-4">
           {/* Portrait spans 2 cols × 2 rows */}
           <div className="col-span-2 row-span-2">
             <Card card={portraitCard} />
           </div>
-          {/* Spotify 1×2 tall */}
-          <div className="row-span-2">
+          {/* Spotify 1×2 tall - hidden on mobile, full row on tablet+ */}
+          <div className="hidden md:block row-span-2">
             <Card card={sideCards[0]} />
           </div>
-          {/* Letterboxd wide 3×1 */}
-          <div className="col-span-3">
+          {/* Spotify (mobile) - 2 cols wide */}
+          <div className="col-span-2 md:hidden">
+            <Card card={sideCards[0]} />
+          </div>
+          {/* Letterboxd wide */}
+          <div className="col-span-2 md:col-span-3">
             <Card card={sideCards[1]} />
           </div>
           {/* Goodreads 1×2 */}
-          <div className="row-span-2">
+          <div className="col-span-2 md:col-span-1 row-span-2">
             <Card card={sideCards[2]} />
           </div>
-          {/* Backloggd 2×1 */}
+          {/* Backloggd */}
           <div className="col-span-2">
             <Card card={sideCards[3]} />
           </div>
-          {/* YouTube 2×1 wide */}
+          {/* YouTube wide */}
           <div className="col-span-2">
             <Card card={sideCards[4]} />
           </div>
