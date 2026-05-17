@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { FaInstagram, FaLinkedin, FaXTwitter, FaFileLines } from "react-icons/fa6";
+import { FaInstagram, FaLinkedin, FaFileLines } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
 export const Route = createFileRoute("/contact")({
@@ -132,33 +132,11 @@ function Contact() {
         ))}
       </section>
 
-      <section className="mt-4 grid grid-cols-1 md:grid-cols-3 gap-4">
-        <a
-          href="https://x.com/yourusername"
-          target="_blank"
-          rel="noreferrer"
-          className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card p-6 md:p-7
-            flex flex-col min-h-[14rem] transition-all duration-500
-            hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)]
-            hover:bg-[#0a0a0a] hover:text-[#f3ede2]"
-        >
-          <div className="flex items-start justify-between relative z-10">
-            <span className="text-sm opacity-70">Follow</span>
-            <ArrowIcon />
-          </div>
-          <Orb from="#555" to="#0a0a0a" />
-          <div className="mt-auto flex items-center gap-3 font-display text-2xl md:text-3xl relative z-10">
-            <span className="inline-flex h-9 w-9 items-center justify-center">
-              <FaXTwitter className="h-5 w-5" />
-            </span>
-            X (Twitter)
-          </div>
-        </a>
-
+      <section className="mt-4 grid grid-cols-1 gap-4">
         <button
           onClick={copy}
           className="group relative overflow-hidden rounded-3xl border border-border/50 bg-card p-6 md:p-7
-            flex flex-col min-h-[14rem] text-left transition-all duration-500 md:col-span-2
+            flex flex-col min-h-[14rem] text-left transition-all duration-500
             hover:-translate-y-1 hover:shadow-[0_20px_50px_-20px_rgba(0,0,0,0.25)]
             hover:bg-[#ec5a3a] hover:text-white"
         >
