@@ -1,7 +1,4 @@
 {
   "buildCommand": "bun run build",
-  "devCommand": "bun run dev",
-  "installCommand": "bun install",
-  "framework": "tanstack-start",
-  "outputDirectory": "dist/server"
+  "installCommand": "bun install"
 }
