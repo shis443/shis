@@ -66,8 +66,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:type", content: "website" },
       { name: "twitter:title", content: "Shis Ousman — Student & Founder" },
       { name: "twitter:description", content: "Shis Ousman — student, founder and creative based in Messina, Sicily. Building immersive stays, cinematic spaces and digital experiences." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a11e1134-b5ba-414c-8470-62a13e3356dc" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/a11e1134-b5ba-414c-8470-62a13e3356dc" },
+
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
